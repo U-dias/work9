@@ -1,0 +1,18 @@
+<table class="file">
+<td><h3>タスク詳細</h3></td>
+<td><h4>タイトル</h4>
+<div><%= @task.title %></div></td>
+<td><h4>内容</h4>
+<div><%= @task.description %></div></td>
+<td><h4>開始日</h4>
+<div><%= @task.start %></div></td>
+<td><h4>終了予定日</h4>
+<div><%= @task.end %></div></td>
+<td><h4>終了日</h4>
+<div><% if @task.completed == 1 %>○
+<% else %>
+<% end %></div>
+</td>
+<td><%= link_to '一覧へ戻る',tasks_path, class:"back" %>
+<%= link_to '編集へ移動', edit_task_path(@task.id),class:"edit" %></td>
+</table>
