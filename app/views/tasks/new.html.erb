@@ -1,0 +1,19 @@
+<table class="file">
+<td><h1>新規タスク</h1>
+<%= form_for(@task) do |f| %>
+
+  <%= render 'layouts/error_messages', model: f.object %>
+  </td>
+  <td><div><%= f.label :title,"タイトル" %></div></td>
+  <td><div><%= f.text_field :title %></div></td>
+  <td><div><%= f.label :description,"内容" %></div></td>
+  <td><div><%= f.text_area :description %></div></td>
+  <td><div><%= f.label :start,"開始時期" %></div></td>
+  <td><div><%= f.date_field :start %></div></td>
+  <td><div><%= f.label :end,"終了予定" %></div></td>
+  <td><div><%= f.date_field :end %></div></td>
+  <div><%=f.hidden_field :completed,:value => 0, id:'task_completed' %></div>
+  <td><div><%= f.submit "作成" %></div>
+<% end %></td>
+<td><%= link_to 'タスク一覧に戻る', tasks_path, class:"back" %></td>
+</table>
