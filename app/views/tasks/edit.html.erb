@@ -1,0 +1,14 @@
+<table class="file">
+<td><h1>タスク編集</h1></td>
+<%= form_for(@task) do |f| %>
+  <td><div><%= f.label :title %></div></td>
+  <td><div><%= f.text_field :title %></div></td>
+  <td><div><%= f.label :description %></div></td>
+  <td><div><%= f.text_area :description %></div></td>
+  <td><div><%= f.label :up %></div></td>
+  <td><div><%= f.datetime_field :up, default: -> { 'now()' } %></div></td>
+  <td><div><%= f.label :completed %></div></td>
+  <td><div><%= f.select :completed, [['未完了',0],['完了',1]], {} %></div>
+  <div><%= f.submit "更新" %></div></td>
+<% end %>
+<td><%= link_to 'タスク一覧に戻る', tasks_path, class:"back" %></td>

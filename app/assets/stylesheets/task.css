@@ -1,0 +1,26 @@
+.head{border:3px solid black;
+      text-align:center;}
+
+.head td {border:2px solid gray;
+          }
+
+.id,.comp{width:8%;}
+.title,.start,.end{width:15%;}
+.up{width:20%;}
+
+.edit,.show,.add,.back{color:inherit;
+            text-decoration:none;}
+
+.delete{border:none;
+        background-color:inherit;
+        cursor:pointer;}
+
+.flash{background-color:orangered;}
+
+.file {
+       height:30%;
+      margin-left:auto;
+      margin-right:auto;
+      text-align:center;}
+.file td{display:block;
+         border-bottom:1px solid black;}
